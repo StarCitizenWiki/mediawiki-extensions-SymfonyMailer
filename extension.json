@@ -12,10 +12,23 @@
 	"requires": {
 		"MediaWiki": ">= 1.39.0"
 	},
+	"ConfigRegistry": {
+		"SymfonyMailer": "GlobalVarConfig::newInstance"
+	},
 	"MessagesDirs": {
 		"SymfonyMailer": [
 			"i18n"
 		]
+	},
+	"config": {
+		"SMTPAuthenticationMethod": {
+			"description": "Set to 'tls' to enable TLS authentication.",
+			"value": false
+		},
+		"SMTPTlsPeerVerification": {
+			"description": "Set to 'true' to disable TLS peer verification.",
+			"value": null
+		}
 	},
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\SymfonyMailer\\": "includes/"

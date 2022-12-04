@@ -22,6 +22,7 @@ declare( strict_types=1 );
 namespace MediaWiki\Extension\SymfonyMailer;
 
 use ConfigException;
+use MailAddress;
 use MediaWiki\Hook\AlternateUserMailerHook;
 use MediaWiki\MediaWikiServices;
 use Symfony\Component\Mailer\Exception\InvalidArgumentException;
@@ -37,19 +38,29 @@ class MailHooks implements AlternateUserMailerHook {
 	 * @inheritDoc
 	 */
 	public function onAlternateUserMailer( $headers, $to, $from, $subject, $body ) {
+		if ( !is_array( $to ) ) {
+			$to = [ $to ];
+		}
+		$recipients = array_map( static function ( MailAddress $recipient ) {
+			return new Address( $recipient->address, $recipient->name ?? '' );
+		}, $to );
+
 		$message = ( new Email() )
 			->subject( $subject )
 			->from( new Address( $from->address, $from->name ) )
+			->to( ...$recipients )
 			->html( $body );
 
-		$returnPath = $headers['Return-Path'];
-		$message->returnPath( $returnPath );
+		$returnPath = $headers['Return-Path'] ?? null;
+		if ( $returnPath !== null ) {
+			$message->returnPath( $returnPath );
+		}
 
 		try {
 			$transport = self::getTransport();
 		} catch ( ConfigException | InvalidArgumentException | TransportException $e ) {
-			wfDebugLog( 'SymfonyMailer', "Transport configuration for SymfonyMailer failed: $e" );
-			return $e;
+			wfLogWarning( "SymfonyMailer: Transport configuration for SymfonyMailer failed: $e" );
+			return false;
 		}
 
 		if ( $transport === null ) {
@@ -59,14 +70,10 @@ class MailHooks implements AlternateUserMailerHook {
 
 		wfDebug( "Sending mail via Symfony::Mail\n" );
 
-		foreach ( $to as $recip ) {
-			$message->to( new Address( $recip->address, $recip->name ) );
-			try {
-				$transport->send( $message );
-			} catch ( TransportExceptionInterface $e ) {
-				wfDebugLog( 'SymfonyMailer', "Symfony Mailer failed: $e" );
-				return $e;
-			}
+		try {
+			$transport->send( $message );
+		} catch ( TransportExceptionInterface $e ) {
+			wfDebugLog( 'SymfonyMailer', "Symfony Mailer failed: $e" );
 		}
 
 		// Alternate Mailer hooks should return false to skip regular false sending
@@ -80,18 +87,23 @@ class MailHooks implements AlternateUserMailerHook {
 	 * @throws ConfigException|InvalidArgumentException
 	 */
 	protected static function getTransport(): ?Transport\TransportInterface {
-		$smtp = MediaWikiServices::getInstance()->getMainConfig()->get( 'SMTP' );
-
 		static $transport = null;
 
 		if ( !$transport ) {
+			$smtp = MediaWikiServices::getInstance()->getMainConfig()->get( 'SMTP' );
+			$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'SymfonyMailer' );
+			$tls = $config->get( 'SMTPAuthenticationMethod' );
+			$tlsNoVerify = $config->get( 'SMTPTlsPeerVerification' );
+
 			if ( is_array( $smtp ) ) {
 				$transport = Transport::fromDsn( sprintf(
-					'smtp://%s:%s@%s:%d',
+					'smtp%s://%s:%s@%s:%d%s',
+					( $tls === 'tls' && $smtp['auth'] === true ) ? 's' : '',
 					$smtp['username'],
 					$smtp['password'],
 					$smtp['host'],
 					$smtp['port'],
+					$tlsNoVerify === true ? '?verify_peer=0' : '',
 				) );
 			} else {
 				throw new TransportException();
