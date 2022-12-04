@@ -49,7 +49,7 @@ class MailHooks implements AlternateUserMailerHook {
 			->subject( $subject )
 			->from( new Address( $from->address, $from->name ) )
 			->to( ...$recipients )
-			->html( $body );
+            ->text( $body );
 
 		$returnPath = $headers['Return-Path'] ?? null;
 		if ( $returnPath !== null ) {
