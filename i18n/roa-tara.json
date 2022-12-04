@@ -4,7 +4,7 @@
 			"Joetaras"
 		]
 	},
-	"swiftmailer-desc": "Dèje SwiftMailer cumme programme de poste alternative",
-	"swiftmailer-smtp-error": "Errore duranne 'a 'mbostaziune d'u carresciamende SMTP pe SwiftMailer : $1",
-	"swiftmailer-send-error": "Errore de invie de 'na mail ausanne SwiftMailer : $1"
+	"symfonymailer-desc": "Dèje SymfonyMailer cumme programme de poste alternative",
+	"symfonymailer-smtp-error": "Errore duranne 'a 'mbostaziune d'u carresciamende SMTP pe SymfonyMailer : $1",
+	"symfonymailer-send-error": "Errore de invie de 'na mail ausanne SymfonyMailer : $1"
 }

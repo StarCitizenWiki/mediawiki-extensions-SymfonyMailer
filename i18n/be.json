@@ -4,7 +4,7 @@
 			"Mechanizatar"
 		]
 	},
-	"swiftmailer-desc": "Дазваляе выкарыстоўваць SwiftMailer у якасці альтэрнатыўнага паштовага кліенту",
-	"swiftmailer-smtp-error": "Памылка пры наладцы SMTP-транспарту для SwiftMailer: $1",
-	"swiftmailer-send-error": "Памылка пры адпраўцы электроннай пошты з дапамогай SwiftMailer: $1"
+	"symfonymailer-desc": "Дазваляе выкарыстоўваць SymfonyMailer у якасці альтэрнатыўнага паштовага кліенту",
+	"symfonymailer-smtp-error": "Памылка пры наладцы SMTP-транспарту для SymfonyMailer: $1",
+	"symfonymailer-send-error": "Памылка пры адпраўцы электроннай пошты з дапамогай SymfonyMailer: $1"
 }

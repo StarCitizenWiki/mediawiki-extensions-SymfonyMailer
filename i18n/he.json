@@ -4,7 +4,7 @@
 			"Amire80"
 		]
 	},
-	"swiftmailer-desc": "אספקת SwiftMailer כשולח דואר חלופי",
-	"swiftmailer-smtp-error": "שגיאה בהגדרת תעבורת SMTP עבור SwiftMailer‏: $1",
-	"swiftmailer-send-error": "שגיאה בשליחת דוא\"ל באמצעות SwiftMailer‏: $1"
+	"symfonymailer-desc": "אספקת SymfonyMailer כשולח דואר חלופי",
+	"symfonymailer-smtp-error": "שגיאה בהגדרת תעבורת SMTP עבור SymfonyMailer‏: $1",
+	"symfonymailer-send-error": "שגיאה בשליחת דוא\"ל באמצעות SymfonyMailer‏: $1"
 }

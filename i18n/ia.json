@@ -4,7 +4,7 @@
 			"McDutchie"
 		]
 	},
-	"swiftmailer-desc": "Forni SwiftMailer como programma de posta alternative",
-	"swiftmailer-smtp-error": "Error de configuration del transporto SMTP pro SwiftMailer: $1",
-	"swiftmailer-send-error": "Error inviante e-mail con SwiftMailer: $1"
+	"symfonymailer-desc": "Forni SymfonyMailer como programma de posta alternative",
+	"symfonymailer-smtp-error": "Error de configuration del transporto SMTP pro SymfonyMailer: $1",
+	"symfonymailer-send-error": "Error inviante e-mail con SymfonyMailer: $1"
 }

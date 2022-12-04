@@ -4,7 +4,7 @@
 			"Elisardojm"
 		]
 	},
-	"swiftmailer-desc": "Proporciona SwiftMailer como servizo de correo electrónico alternativo",
-	"swiftmailer-smtp-error": "Erro de configuración de SMTP para SwiftMailer: $1",
-	"swiftmailer-send-error": "Erro enviando correo electrónico usando SwiftMailer: $1"
+	"symfonymailer-desc": "Proporciona SymfonyMailer como servizo de correo electrónico alternativo",
+	"symfonymailer-smtp-error": "Erro de configuración de SMTP para SymfonyMailer: $1",
+	"symfonymailer-send-error": "Erro enviando correo electrónico usando SymfonyMailer: $1"
 }

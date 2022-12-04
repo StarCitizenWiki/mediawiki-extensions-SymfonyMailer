@@ -4,7 +4,7 @@
 			"Bjankuloski06"
 		]
 	},
-	"swiftmailer-desc": "Го дава SwiftMailer како алтернативна поштенска програма",
-	"swiftmailer-smtp-error": "Грешка при поставувањето на SMTP-преносот за SwiftMailer: $1",
-	"swiftmailer-send-error": "Грешка при испраќањето на ел. пошта со SwiftMailer: $1"
+	"symfonymailer-desc": "Го дава SymfonyMailer како алтернативна поштенска програма",
+	"symfonymailer-smtp-error": "Грешка при поставувањето на SMTP-преносот за SymfonyMailer: $1",
+	"symfonymailer-send-error": "Грешка при испраќањето на ел. пошта со SymfonyMailer: $1"
 }

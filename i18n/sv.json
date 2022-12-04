@@ -5,7 +5,7 @@
 			"Lokal Profil"
 		]
 	},
-	"swiftmailer-desc": "Gör SwiftMailer tillgängligt som en alternativ mailklient",
-	"swiftmailer-smtp-error": "Fel vid konfigurering av SMTP-transport för SwiftMailer: $1",
-	"swiftmailer-send-error": "Fel vid sändning av e-post med SwiftMailer: $1"
+	"symfonymailer-desc": "Gör SymfonyMailer tillgängligt som en alternativ mailklient",
+	"symfonymailer-smtp-error": "Fel vid konfigurering av SMTP-transport för SymfonyMailer: $1",
+	"symfonymailer-send-error": "Fel vid sändning av e-post med SymfonyMailer: $1"
 }

@@ -5,7 +5,7 @@
 			"Purodha"
 		]
 	},
-	"swiftmailer-desc": "Ermöglicht SwiftMailer als alternativen Mailer",
-	"swiftmailer-smtp-error": "Fehler beim Aufsetzen des SMTP-Transportes für SwiftMailer: $1",
-	"swiftmailer-send-error": "Fehler beim Versenden der E-Mail mit SwiftMailer: $1"
+	"symfonymailer-desc": "Ermöglicht SymfonyMailer als alternativen Mailer",
+	"symfonymailer-smtp-error": "Fehler beim Aufsetzen des SMTP-Transportes für SymfonyMailer: $1",
+	"symfonymailer-send-error": "Fehler beim Versenden der E-Mail mit SymfonyMailer: $1"
 }

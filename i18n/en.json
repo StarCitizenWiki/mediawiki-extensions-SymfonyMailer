@@ -4,7 +4,7 @@
 			"Tony Thomas"
 		]
 	},
-	"swiftmailer-desc": "Provides SwiftMailer as alternate mailer",
-	"swiftmailer-smtp-error": "Error setting up SMTP transport for SwiftMailer: $1",
-	"swiftmailer-send-error": "Error sending email using SwiftMailer: $1"
+	"symfonymailer-desc": "Provides SymfonyMailer as alternate mailer",
+	"symfonymailer-smtp-error": "Error setting up SMTP transport for SymfonyMailer: $1",
+	"symfonymailer-send-error": "Error sending email using SymfonyMailer: $1"
 }

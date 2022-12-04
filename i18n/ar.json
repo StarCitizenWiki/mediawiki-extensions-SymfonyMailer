@@ -4,7 +4,7 @@
 			"ديفيد"
 		]
 	},
-	"swiftmailer-desc": "يوفر SwiftMailer كمرسل بريد بديل",
-	"swiftmailer-smtp-error": "خطأ في إعداد النقل SMTP لـSwiftMailer: $1",
-	"swiftmailer-send-error": "خطأ في إرسال البريد الإلكتروني باستخدام SwiftMailer: $1"
+	"symfonymailer-desc": "يوفر SymfonyMailer كمرسل بريد بديل",
+	"symfonymailer-smtp-error": "خطأ في إعداد النقل SMTP لـSymfonyMailer: $1",
+	"symfonymailer-send-error": "خطأ في إرسال البريد الإلكتروني باستخدام SymfonyMailer: $1"
 }

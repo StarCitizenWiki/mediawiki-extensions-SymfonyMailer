@@ -4,6 +4,6 @@
 			"Умар"
 		]
 	},
-	"swiftmailer-smtp-error": "SMTP-транспорт хӀоттош гӀалат ду SwiftMailer: $1",
-	"swiftmailer-send-error": "Электронан пошт дӀайохуьйтуш гӀалат ду SwiftMailer гӀоьнца: $1"
+	"symfonymailer-smtp-error": "SMTP-транспорт хӀоттош гӀалат ду SymfonyMailer: $1",
+	"symfonymailer-send-error": "Электронан пошт дӀайохуьйтуш гӀалат ду SymfonyMailer гӀоьнца: $1"
 }

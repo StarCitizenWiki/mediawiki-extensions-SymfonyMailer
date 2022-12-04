@@ -4,7 +4,7 @@
 			"Ата"
 		]
 	},
-	"swiftmailer-desc": "Забезпечує SwiftMailer у ролі альтернативного поштовика",
-	"swiftmailer-smtp-error": "Помилка при налаштуванні SMTP-транспорту для SwiftMailer: $1",
-	"swiftmailer-send-error": "Помилка при відправці електронного листа з допомогою SwiftMailer: $1"
+	"symfonymailer-desc": "Забезпечує SymfonyMailer у ролі альтернативного поштовика",
+	"symfonymailer-smtp-error": "Помилка при налаштуванні SMTP-транспорту для SymfonyMailer: $1",
+	"symfonymailer-send-error": "Помилка при відправці електронного листа з допомогою SymfonyMailer: $1"
 }

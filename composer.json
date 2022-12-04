@@ -1,5 +1,5 @@
 {
-	"name": "mediawiki/swiftmailer",
+	"name": "mediawiki/symfonymailer",
 	"authors": [
 		{
 			"name": "Tony Thomas",
@@ -16,17 +16,17 @@
 			"email": "jgreen@wikimedia.org"
 		}
 	],
-	"homepage": "https://www.mediawiki.org/wiki/Extension:SwiftMailer",
+	"homepage": "https://www.mediawiki.org/wiki/Extension:SymfonyMailer",
 	"support": {
 		"email": "01tonythomas@gmail.com",
 		"issues": "https://phabricator.wikimedia.org/",
 		"irc": "irc://irc.freenode.org/wikimedia-dev",
-		"source": "https://github.com/wikimedia/mediawiki-extensions-SwiftMailer"
+		"source": "https://github.com/wikimedia/mediawiki-extensions-SymfonyMailer"
 	},
-	"description": "SwiftMailer library for Mediawiki extension SwiftMailer",
+	"description": "SwiftMailer library for Mediawiki extension SymfonyMailer",
 	"license": "GPL-2.0-or-later",
 	"require": {
-		"swiftmailer/swiftmailer": "^5.4.5"
+		"symfony/mailer": "^6.2"
 	},
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": "40.0.1",

@@ -1,31 +1,32 @@
 {
-	"name": "SwiftMailer",
-	"version": "1.1",
+	"name": "SymfonyMailer",
+	"version": "1.0",
 	"author": [
+		"Octfx",
 		"Tony Thomas"
 	],
-	"url": "https://www.mediawiki.org/wiki/Extension:SwiftMailer",
-	"descriptionmsg": "swiftmailer-desc",
+	"url": "https://www.mediawiki.org/wiki/Extension:SymfonyMailer",
+	"descriptionmsg": "symfonymailer-desc",
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.29.0"
+		"MediaWiki": ">= 1.39.0"
 	},
 	"MessagesDirs": {
-		"SwiftMailer": [
+		"SymfonyMailer": [
 			"i18n"
 		]
 	},
-	"AutoloadClasses": {
-		"SwiftMailerHooks": "SwiftMailerHooks.php"
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\SymfonyMailer\\": "includes/"
+	},
+	"HookHandlers": {
+		"MailHooks": {
+			"class": "MediaWiki\\Extension\\SymfonyMailer\\MailHooks"
+		}
 	},
 	"Hooks": {
-		"AlternateUserMailer": "SwiftMailerHooks::onAlternateUserMailer"
-	},
-	"config": {
-		"SMTPAuthenticationMethod": {
-			"value": false
-		}
+		"AlternateUserMailer": "MailHooks"
 	},
 	"load_composer_autoloader": true,
 	"manifest_version": 2

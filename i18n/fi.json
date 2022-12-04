@@ -4,6 +4,6 @@
 			"Pyscowicz"
 		]
 	},
-	"swiftmailer-smtp-error": "Virhe määrittäessä SMTP-liikennettä SwiftMailer: $1",
-	"swiftmailer-send-error": "Virhe lähetettäessä sähköpostia käyttäen SwiftMailer: $1"
+	"symfonymailer-smtp-error": "Virhe määrittäessä SMTP-liikennettä SymfonyMailer: $1",
+	"symfonymailer-send-error": "Virhe lähetettäessä sähköpostia käyttäen SymfonyMailer: $1"
 }
